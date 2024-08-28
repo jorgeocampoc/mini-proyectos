@@ -1,0 +1,16 @@
+:root{
+    --color-blue1:#0D4B74;
+    --color-orange1:#ca8a04;
+}
+
+.bg-blue1{
+    background-color: var(--color-blue1);
+}
+
+.bg-orange{
+    background-color: var(--color-orange1);
+}
+
+.custom-width{
+    width: 500px;
+}

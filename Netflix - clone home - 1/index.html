@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <p>Netflix</p>
+      </div>
+      <div class="header-center">
+        <nav>
+          <a href="">Home</a>
+          <a href="">Tv Shows</a>
+          <a href="">Movies</a>
+          <a href="">Latest</a>
+          <a href="">My List</a>
+        </nav>
+      </div>
+      <div class="header-right">
+        <input type="text" placeholder="Search" />
+        <i class="fa-solid fa-magnifying-glass glass"></i>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-img">
+        <p>N <label>Serie</label></p>
+      </div>
+      <div class="content-title">
+        <p>PEAKE <label style="margin: 0 5px"></label> BLINDERS</p>
+      </div>
+      <div class="content-options">
+        <ul>
+          <li>2022</li>
+          <label  class="divition">|</label>
+          <li
+            style="
+              background-color: red;
+              text-decoration: underline;
+              text-underline-offset: 7px;
+            "
+          >
+            16+
+          </li>
+          <label class="divition" for="">|</label>
+          <li>6 Seasons</li>
+          <label class="divition" for="">|</label>
+          <li style="border: none">Series</li>
+        </ul>
+      </div>
+      <div class="content-description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nam
+          minus odit quos! Eligendi officiis ipsam porro impedit exercitationem
+          blanditiis non! Nobis, eligendi soluta dolore beatae dolorem officiis
+          ipsam animi? Nemo autem quisquam, adipisci quae optio iste repudiandae
+          porro natus odit, aspernatur velit illo.
+        </p>
+      </div>
+      <div class="content-play">
+        <button class="content-play-play" style="background-color: red">
+          PLAY
+        </button>
+        <button class="content-play-list">My List</button>
+      </div>
+      <div class="content-watch">
+        <div><i class="fa-regular fa-circle-play fa-3x play"></i></div>
+        <div>
+          <a href="#trailer" class="play">
+            <p class="watch-trailer" href="#trailer">Watch Trailer</p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <section id="trailer">
+      <div class="trailer">
+        <p
+          style="
+            font-size: 50px;
+            text-align: center;
+            padding-top: 30px;
+            text-decoration: underline;
+            text-underline-offset: 20px;
+          "
+        >
+          PEAKE BLINDERS
+        </p>
+        <iframe
+          style="text-align: center"
+          width="1280"
+          height="720"
+          src="https://www.youtube.com/embed/Ruyl8_PT_y8"
+          title="Peaky Blinders | Season 5 Trailer | Netflix"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+  </body>
+</html>

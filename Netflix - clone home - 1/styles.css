@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: whitesmoke;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(22, 21, 21);
+  overflow-x: hidden;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(
+    circle,
+    rgba(15, 15, 15, 0) 0%,
+    rgba(14, 13, 13, 0.7) 20%
+  );
+  z-index: -1;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 20px;
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 25px;
+}
+nav a:hover {
+  cursor: pointer;
+  /* background-color: rgba(59, 61, 65, 0.438); */
+
+  border-radius: 5px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  height: 100px;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.header-left p {
+  color: red;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 70px;
+  margin-top: 0;
+  margin-left: 50%;
+}
+.header-right {
+  margin-right: 5%;
+  position: relative;
+}
+
+.glass {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 10px;
+  top: 37px;
+}
+
+input {
+  border: 1px solid rgb(110, 103, 103);
+  background: transparent;
+  padding: 15px 25px;
+  margin-top: 10px;
+  padding-left: 35px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.content {
+  margin-left: 10%;
+  margin-top: 8%;
+}
+.content-img p label {
+  color: whitesmoke;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  bottom: -10%;
+  left: 6%;
+  letter-spacing: 10px;
+}
+
+.content-img {
+  position: relative;
+  height: 5vh;
+  width: 40vw;
+  color: red;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 60px;
+}
+.content-title {
+  height: 10vh;
+  width: 100vw;
+  text-wrap: wrap;
+}
+.content-options {
+  height: 5vh;
+  width: 40vw;
+}
+.content-description {
+  height: 20vh;
+  width: 48%;
+}
+.content-play {
+  display: flex;
+  justify-content: flex-start;
+  height: 5vh;
+  align-items: center;
+  width: 40vw;
+}
+.content-watch {
+  height: 10vh;
+  width: 16vw;
+  margin: 80px 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+}
+.content-watch:hover {
+  background-color: rgba(12, 12, 12, 0.411);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.content-title p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 110px;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  text-wrap: balance;
+  letter-spacing: -5px;
+  padding-bottom: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-left: 0;
+}
+ul li {
+  cursor: pointer;
+  list-style: none;
+  border: none;
+  font-size: 25px;
+  color: rgb(168, 172, 179);
+  font-weight: lighter;
+}
+
+ul li:hover {
+  cursor: pointer;
+  display: inline;
+  border-radius: 3px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.content-description p {
+  color: whitesmoke;
+  font-size: 25px;
+  text-align: justify;
+  text-decoration: none;
+}
+
+.divition{
+    padding-top: 5px;
+}
+
+
+button {
+  padding: 8px 25px;
+  margin-right: 3%;
+  font-size: 20px;
+  background: transparent;
+  font-weight: bold;
+  color: whitesmoke;
+  border: 1px solid rgb(82, 79, 79);
+  border-radius: 5px;
+}
+
+.watch-trailer {
+  font-size: 40px;
+  padding-left: 20px;
+  padding-bottom: 7px;
+  color: wheat;
+}
+
+button:hover {
+  background-color: rgb(20, 22, 24);
+
+  
+  cursor: pointer;
+}
+
+section {
+  height: 100vh;
+  background-color: rgb(22, 21, 21);
+}
+.trailer {
+  text-align: center;
+}
+
+.play {
+  text-decoration: none;
+}

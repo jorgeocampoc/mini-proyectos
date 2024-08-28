@@ -64,14 +64,8 @@ const registerUser = ( event )=>{
             users.push( user )
             localStorage.setItem( 'users', JSON.stringify(users) );
             generateAlert('success', user.name, 'Ir a login')
-            cleanInputs();
-            document.getElementById('formRegister').classList.remove('was-validated');
-            d.getElementById('formRegister').reset();
         }else{
             generateAlert('error', user.name, 'Regresar')
-            document.getElementById('formRegister').classList.remove('was-validated');
-            cleanInputs();
-
         }
     }else{
         if( nameReg.value.trim() == '' ){
@@ -95,12 +89,11 @@ function generateAlert(tipo, userName, action){
     }).then((result) => {
         if( tipo == 'success' ){
             if (result.isConfirmed) {
-                
                     goToLogin();
-                
             }
         }
-        
+        document.getElementById('formRegister').classList.remove('was-validated');
+        d.getElementById('formRegister').reset();
     });
 }
 
@@ -112,29 +105,39 @@ const loginUser = ( event )=>{
     user.password = passwordLog.value;
     if( isExiste( user, users ) ){
         localStorage.setItem('user', user.name);
-        cleanInputs();
         d.getElementById('formLogin').reset();
-        cleanInputs();
         window.location.href = 'home.html'
     }else{
-        alert( 'el usaurio no existe' );
-        d.getElementById('loginForm').reset();
-        user.name = '';
-        user.password = '';
+        generateAlertNoExiste('error', 'El usuario/contraseña son invalidas')
+        d.getElementById('formLogin').reset();
+
     }
 
 }
 
 
-function cleanInputs(){
-    user.name = '';
-    user.password = '';
-    nameLog.value = '';
-    passwordLog.value = '';
-    nameReg.value = '';
-    passwordReg.value = '';
+function generateAlertNoExiste(tipo, message){
+    Swal.fire({
+        title: 'Operacion fallida',
+        text: `${message}`,
+        icon: `${tipo}`
+      }).then( (res)=>{
+        d.getElementById('formLogin').reset();
+        document.getElementById('formLogin').classList.remove('was-validated');
+
+      } )
 
 }
+
+// function cleanInputs(){
+//     user.name = '';
+//     user.password = '';
+//     nameLog.value = '';
+//     passwordLog.value = '';
+//     nameReg.value = '';
+//     passwordReg.value = '';
+
+// }
 
 
 

@@ -44,7 +44,7 @@ function logout(){
         if (result.isConfirmed) {
           localStorage.removeItem('user');
           localStorage.removeItem('alertBand');
-          window.location.href = 'login.html';
+          window.location.href = 'index.html';
         }
       });
    

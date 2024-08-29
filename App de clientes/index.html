@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --yellow-custom: #ffd21f;
+      }
+
+      .bg-yellow {
+        background-color: var(--yellow-custom);
+      }
+      .text-yellow {
+        color: var(--yellow-custom);
+      }
+      .h-7 {
+        height: 7vh;
+      }
+      .nav-link-custom {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #303644 !important;
+      }
+      .nav-link:hover {
+        font-weight: bold;
+      }
+      .active {
+        font-weight: bold;
+        border-bottom: 1px solid #1d1d1d;
+        color: rgb(34, 33, 33);
+      }
+      nav li {
+        margin: 0 8px;
+      }
+      .dropdown-item:hover {
+        background-color: rgba(163, 163, 163, 0.418);
+      }
+      @media screen and (max-width: 576px) {
+        .icon-sm {
+          font-size: 3rem !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-sm bg-yellow h-7 shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.hamiloes.cool/wp-content/uploads/2023/05/Diseno-sin-titulo-5.png"
+            alt="Bootstrap"
+            width="60"
+            height="60"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom active"
+                aria-current="page"
+                href="#"
+              >
+                <i class="fa-solid fa-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="ventas.html">
+                <i class="fa-solid fa-cart-shopping me-1"></i>Ventas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="compras.html"
+                ><i class="fa-solid fa-cart-flatbed-suitcase me-1"></i
+                >Compras</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="productos.html"
+                ><i class="fa-solid fa-sitemap me-1"></i>Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="clients.html"
+              >
+                <i class="fa-solid fa-users me-1"></i>Clientes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="proveedores.html"
+              >
+                <i class="fa-solid fa-truck-moving me-1"></i>Proveedores</a
+              >
+            </li>
+          </ul>
+          <div class="dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="dropdownProfile"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="img/profile.png"
+                alt=""
+                width="45"
+                class="rounded-circle mx-2"
+                height="45"
+              />
+              Jorge Ocampo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+              <a class="dropdown-item" href="perfil.html">
+                <i class="fa-regular fa-user me-3 text-secondary"></i> Perfil
+              </a>
+              <a class="dropdown-item" href="#">
+                <i
+                  class="fa-solid fa-arrow-right-from-bracket me-3 text-secondary"
+                ></i>
+                Cerrar sesion
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid pt-3">
+      <h3 class="ms-3">inicio</h3>
+      <hr >
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card m-1 bg-primary text-white border border-0 shadow">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9 col-9 col-sm-9">
+                  <h5 class="card-title display-6">$12.500.00</h5>
+                  <p class="card-subtitle">Compras del mes</p>
+                </div>
+                <div class="col-md-3 display-4 col-3 col-sm-3 icon-sm">
+                  <i class="fa fa-shopping-bag"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card m-1 bg-dark text-white border border-0 shadow">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9 col-9 col-sm-9">
+                  <h5 class="card-title display-6">$12.500.00</h5>
+                  <p class="card-subtitle">Compras del mes</p>
+                </div>
+                <div class="col-md-3 display-4 col-3 col-sm-3 icon-sm">
+                  <i class="fa fa-shopping-bag"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card m-1 bg-success text-white border border-0 shadow">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9 col-9 col-sm-9">
+                  <h5 class="card-title display-6">$12.500.00</h5>
+                  <p class="card-subtitle">Ventas del año</p>
+                </div>
+                <div class="col-md-3 display-4 col-3 col-sm-3 icon-sm">
+                  <i class="fa fa-line-chart" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card m-1 bg-info text-white border border-0 shadow">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9 col-9 col-sm-9">
+                  <h5 class="card-title display-6">$12.500.00</h5>
+                  <p class="card-subtitle">Compras del mes</p>
+                </div>
+                <div class="col-md-3 display-4 col-3 col-sm-3 icon-sm">
+                  <i class="fa fa-area-chart" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-md-8">
+          <div class="card m-1">
+            <div class="card-body">
+              <h5 class="card-title">Compras y ventas mensuales</h5>
+              <div id="chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="card m-1 ">
+            <div class="card-body">
+              <h5 class="card-title">Ventas del año</h5>
+              <div id="chartDonut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+      var options = {
+        chart: {
+          type: "area",
+        },
+        series: [
+          {
+            name: "Ventas",
+            data: [30, 40, 35, 50, 49, 60, 70, 91, 125, 0, 0, 0],
+          },
+          {
+            name: "Compras",
+            data: [60, 30, 95, 20, 19, 90, 0, 50, 20, 0, 0, 0],
+          },
+        ],
+        dataLabels: {
+          enabled: false,
+        },
+        stroke: {
+          curve: "smooth",
+        },
+        xaxis: {
+          categories: [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "octubre",
+            "nov",
+            "dic",
+          ],
+        },
+      };
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+
+      var optionsDonut = {
+        series: [44, 55, 41, 17, 15],
+        chart: { type: "donut" },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        ],
+      };
+      var chartDonut = new ApexCharts(document.querySelector("#chartDonut"), optionsDonut);
+      chartDonut.render();
+    </script>
+  </body>
+</html>

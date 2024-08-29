@@ -1,0 +1,119 @@
+body{
+    /* background-color: rgb(235, 66, 59); */
+    /* rgb(235, 66, 59) */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background: radial-gradient(circle, rgb(235, 66, 59) 50%, rgb(218, 40, 49) 100%);
+
+}
+.header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+ul li{
+    margin-right: 20px;
+    list-style: none;
+    font-size: 20px;
+    width: inherit;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+
+.header-nav-icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-nav-icon img{
+    margin-left: 20px;
+    height: 30%;
+    width: 30%;
+}
+
+.content{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: wheat;
+    gap: 30px;
+    
+
+}
+.content-img{
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content-text{
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-between;
+    
+}
+.title p{
+    font-size: 100px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.description p{
+    font-size: 20px;
+}
+button{
+    color: black;
+    border: 1px solid rgb(105, 103, 103) ;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.footer{
+    color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    width: inherit;
+    gap: 20px;
+    height: 10vh;
+    
+
+
+}
+i{
+    cursor: pointer;
+   
+}
+
+.content-img::before{
+    content: "";
+    border-radius: 25px ;
+    width: 100%;
+    height: 80%;
+    background-image: url(https://tb-static.uber.com/prod/image-proc/processed_images/42d969056811e2d1ed6e4aa67a026dfd/30be7d11a3ed6f6183354d1933fbb6c7.jpeg);
+    opacity: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

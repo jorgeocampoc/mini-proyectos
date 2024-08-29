@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      :root {
+        --yellow-custom: #ffd21f;
+      }
+
+      .bg-yellow {
+        background-color: var(--yellow-custom);
+      }
+      .text-yellow {
+        color: var(--yellow-custom);
+      }
+      .h-7 {
+        height: 7vh;
+      }
+      .nav-link-custom {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #303644 !important;
+      }
+      .nav-link:hover {
+        font-weight: bold;
+      }
+      .active {
+        font-weight: bold;
+        border-bottom: 1px solid #1d1d1d;
+        color: rgb(34, 33, 33);
+      }
+      nav li {
+        margin: 0 8px;
+      }
+      .dropdown-item:hover {
+        background-color: rgba(163, 163, 163, 0.418);
+      }
+      @media screen and (max-width: 576px) {
+        .icon-sm {
+          font-size: 3rem !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-sm bg-yellow h-7 shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.hamiloes.cool/wp-content/uploads/2023/05/Diseno-sin-titulo-5.png"
+            alt="Bootstrap"
+            width="60"
+            height="60"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="#">
+                <i class="fa-solid fa-house me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="#">
+                <i class="fa-solid fa-cart-shopping me-1"></i>Ventas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="compras.html"
+                ><i class="fa-solid fa-cart-flatbed-suitcase me-1"></i
+                >Compras</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="productos.html"
+                ><i class="fa-solid fa-sitemap me-1"></i>Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="clients.html"
+              >
+                <i class="fa-solid fa-users me-1"></i>Clientes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-custom"
+                aria-current="page"
+                href="proveedores.html"
+              >
+                <i class="fa-solid fa-truck-moving me-1"></i>Proveedores</a
+              >
+            </li>
+          </ul>
+          <div class="dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="dropdownProfile"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+              src="img/profile.png"
+                alt=""
+                width="45"
+                class="rounded-circle mx-2"
+                height="45"
+              />
+              Jorge Ocampo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+              <a class="dropdown-item" href="#">
+                <i class="fa-regular fa-user me-3 text-secondary"></i> Perfil
+              </a>
+              <a class="dropdown-item" href="#">
+                <i
+                  class="fa-solid fa-arrow-right-from-bracket me-3 text-secondary"
+                ></i>
+                Cerrar sesion
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container pt-3">
+      <h3>Perfil</h3>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card m-1">
+            <div class="card-body">
+              <div class="text-center">
+                <img
+                  src="/img/profile.png"
+                  alt="avatar"
+                  width="150"
+                  height="150"
+                  class="img-fluid rounded-circle border border-warning"
+                />
+                <br />
+                <button
+                  class="btn btn-dark btn-sm my-3"
+                  type="button"
+                  style="position: absolute; top: 130px; right: 45%"
+                >
+                  <i class="fa fa-camera" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <h5 class="text-center">Jorge Ocampo</h5>
+            <div class="text-center mb-3">
+              <span class="badge bg-success"> Online</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card m-1">
+            <div class="card-body">
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link active"
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Datos personales
+                  </button>
+                  <button
+                    class="nav-link"
+                    id="nav-profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-profile"
+                    aria-selected="false"
+                  >
+                    Credenciales
+                  </button>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-home"
+                  role="tabpanel"
+                  aria-labelledby="nav-home-tab"
+                  tabindex="0"
+                >
+                  <form action="" class="needs-validation" novalidate>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Name</label>
+                          <input
+                            type="text"
+                            name=""
+                            id="name"
+                            class="form-control"
+                            placeholder=""
+                            aria-describedby="helpId"
+                            value="Jorge"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="LastName" class="form-label"
+                            >Apellido</label
+                          >
+                          <input
+                            type="text"
+                            name=""
+                            id="Lastname"
+                            class="form-control"
+                            placeholder=""
+                            aria-describedby="helpId"
+                            value="Jorge"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="phone" class="form-label">Telefono</label>
+                          <input
+                            type="text"
+                            name=""
+                            id="phone"
+                            class="form-control"
+                            placeholder=""
+                            aria-describedby="helpId"
+                            value="Jorge"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="email" class="form-label"
+                            >Correo</label
+                          >
+                          <input
+                            type="text"
+                            name=""
+                            id="email"
+                            class="form-control"
+                            placeholder=""
+                            aria-describedby="helpId"
+                            value="Jorge"
+                          />
+                        </div>
+                      </div>
+                   </div>
+                   <div class="text-start">
+                    <button type="button" class="btn btn-primary mb-3">
+                      actualizar
+                    </button>
+                   </div>
+                  </form>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="nav-profile"
+                  role="tabpanel"
+                  aria-labelledby="nav-profile-tab"
+                  tabindex="0"
+                >
+                  ...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </body>
+</html>

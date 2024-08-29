@@ -1,0 +1,271 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(15, 15, 15);
+    overflow-y: hidden;
+    color: whitesmoke;
+
+}
+
+/* Search */
+.glass{
+    background-color: rgb(66, 70, 70);
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+}
+.search{
+    display: flex;
+    align-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+}
+
+header div div {
+    position: relative;
+}
+.icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+}
+input{
+    padding: 10px 10px 10px 50px;
+    outline: none;
+    border-radius: 15px;
+    width: 350px;
+    text-align: left;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    position: static;
+    margin-top: 5px;
+    width: 100vw;
+}
+section{
+    display: grid;
+    grid-template-columns: 15% auto;
+    height: 94vh;
+}
+
+/* menu-top */
+.content{
+    display: flex;
+    flex-direction: column;
+}
+div div ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+    cursor: pointer;
+
+}
+div div ul li{
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin: 5px 10px;
+    padding: 5px 15px;
+    background-color: rgb(63, 62, 62);
+    border-radius: 8px;
+
+}
+div div ul li:hover{
+    background-color: rgb(85, 81, 81);
+
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* videos */
+.content-item{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 90vh;
+        
+}
+hr{
+    border: none;
+    background-color: rgb(88, 88, 88);
+    height: 1px;
+}
+.content-item::-webkit-scrollbar-thumb{
+    background-color: rgb(88, 88, 88);
+    border-radius: 12px;
+}
+.content-item::-webkit-scrollbar{
+    width: 10px;
+}
+.item{
+    width: 250px;
+    height: 220px;
+    flex-shrink: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 15px 15px 0 0;   
+    cursor: pointer;
+
+}
+
+.item::before{
+    content: "15:52";
+    display: block;
+    border-radius: 13px ;
+    width: 100%;
+    height: 50%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAyVBMVEUoKCj+AAD////9enoUKSn8AAAoKCcRKionKCklKCj7//+iGBmpFxn5AAD+AAMoJyceKSkaKSqUGhi/ExgAKikhKSgjJyoZKihbIiJhICB1HR9yHx2MGhuIGxy9EhDHERDnBgnaCw0zJydPIyJrHx87JSaXGBhJIyNUIiLUDArhCAvuBAZIJiF5IByEHh+0FxT15eP6rqr69PY4Jyb7ysb539z6pqP6np77dG/6kpH3YF34Nzn5iof8Iif3VVX7w8P5SUX7Gx36gn2eTa0bAAAE2ElEQVR4nO3dDVPbNgAG4DixbMvEtpzYMQn5dCAQUkIHY2xdP7b9/x81KUDWljbCshPJ2ftce70DGs7vyZIsyVKjAQAAAAAAAAAAAAAAAAAAAAAAAAAAALBnUYN6VPzjRB6lNKVp2mOUsZQxlsVxbL9wt7Zf4t/O2OZHKeulKRW8yImiBv9Qj3/mceBXxbLMdhN+6fx60/zi8vL0tN/vD87ORsPhcHHyrL318pUF//bo7GzAf/j0dH55kfNks2wTYpYx/sG6r60MT/ylLObB5BdXg1GnPZ5MltergCOWIiL+9+p6OZmM253R4Ooi5x8fM+o9/8J68SJq2/n5ojubBqqJyAXTWXdxnru2E9WvQEVu3pmJcEIrJCFRLjg/R/jH8g8Xv2LWyd2aVUsOTe32HgvPa0E7Tqmj+7oL8Oz+yjpsRNaqb9enOooayYjfB+EhIwr5nTxK6tMJSBaHLUJPAmuR6L7yN3LsG946a4iIWAPbqcPNFvXehRoC2oQUvuvV4VZzkmsdt9lTRNdJHSKKR3ryebKOdV//GySrgzZl3wpX5tfYDuN1tb6IiHXDDO9Aeo473sfDxtszmriGN2pOI9N5n/Eae5U1zC5GDpvrDEiY98yOqBGvdUe0Zroz2I26t7ojunUNHzlKlrojWhre7HuJpo71f4LE7BaNRlrbM4EYPkSbXoWaMwrDq1R3Cjuxc0t3RNa52U1a1tEbkNDJdKewk31SvBCVmFf7kfDE1p3CTu64+DUFFTeCY1d3CjslS4VS9PsfpMrJAMM7Ru5M4VJb/vsPFQ4PzMwuRWxa/FKDlu/7v/7JS1IlOZGV0S0ajQKFflGr2Wz6/i9l1kN8lVAYGN13pPlmzq94RD7P6O5jFfU2r9RykyPy7lWuSpQiwX/4UMn8273JD2l0rtK53kbEq6RPpe81Ys0NLkVepvT88RLRJqbHwApKdQDEE4i5xchjA5Xpj68javp3rXK1NrEGJkcUr0tHJKqkz6RESSLWOjY3IspuVC7qu4h4nfTlU5mnkpue7iB+zouHVUQkQvqtxM02jM2d2KdqYyGvIxJV0j+8K6l2t3UMnteP7HZVEfGC9PBZsd5u2waXoioj4n9ElaTw3NY2ecBIbRbthxE9lSTeSyoe0a3BC4wdlRG1nRE171qk8NNt1+iIupVGtInp4a+iHYCua+6s/l4i4r2kvxHRrog2t9tjoXKEiBARbrTCEfHqunCLZnJE+2j0C4/6m9zoV9x19EXXUaF3bXLXEQ8gUniMlapyMOT9cQ6GYEhNCgOzUpUM7/tHPbyPSSKp0lONftN/JOSYpxoxYS2HZQ9SyotnRAm6+1jN+iKzF89gCZacCQv5pkYv5FNaDkr+X8tBVRcVkwoXFc8MX1SMpekyeMFBCq/JSOFlKym8sieFFz+l8PqwHF5Cl8FWBnLYEEMG26pIYXMeKd1bPIXmb/EUmbBRmLkTjc+w3ZwUNi2UirD1pYyDDVSlIrENr4YqOwjrsg1vQ9NmzqRGmzlr3BK8JkVIOPzG8qE1rdPG8nqOJ7DrdTxBA4dcvIE4KsW9P8xRKff1PCoFB+4UgWObpDaHf3leFH1z+Ff66vAv1319+tf28K/0+8O/vGM6/AsAAAAAAAAAAAAAAAAAAAAAAAAAAAAM9i8mDJAh4mAF1gAAAABJRU5ErkJggg==);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+div div div h3{
+    max-width: 180px;        
+    overflow: hidden;        
+    height: 2.4em;           
+    margin: 0;         
+    margin-bottom: 5px;
+         
+}
+
+.item-content{
+    display: flex;
+    justify-content: space-evenly;
+
+    
+}
+.content-canal-icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+}
+
+.content-canal-icon::before{
+    content: "";
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDe7rl95VVMz_omQFPgrUcC1wl0lwDafPlhNq2GxZkgqcO3RL-ArBKC_jSXBfdKdAqIc&usqp=CAU);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+label{
+    color: gray;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+section .menu ul li{
+    list-style: none;
+    text-align: start;
+    padding: 10px;    
+    cursor: pointer;
+    text-wrap: nowrap;
+    
+}
+section .menu ul li:hover{
+    background-color: rgb(85, 81, 81);
+    border-radius: 8px;
+    margin: 0;
+
+}
+section .menu ul {
+    margin: 0;
+    padding: 20px 20px;
+    
+    
+}
+section .menu ul  label{
+        font-size: large;
+        color: wheat;
+        margin-left: 15px;
+}
+
+h4{
+    font-size: small;
+}
+
+
+/* Menu */
+
+.menu{
+    overflow-y: hidden;
+
+}
+.menu::-webkit-scrollbar{
+    width: 10px;
+    color: aqua;
+}
+.menu::-webkit-scrollbar-thumb{
+    background-color: rgb(88, 88, 88);
+    border-radius: 12px;
+}
+.menu:hover{
+    overflow-y: auto;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+
+.header-left{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 10px;
+}
+
+
+.youtube{
+   
+font-size: 25px;
+margin-left: 0;
+
+}
+
+
+/* Rigth-Icons */
+
+
+header  div ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 25px;
+    cursor: pointer;
+
+}
+
+

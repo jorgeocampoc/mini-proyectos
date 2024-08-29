@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --yellow-custom: #ffd21f;
+      }
+      * {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .bg-yellow {
+        background-color: var(--yellow-custom);
+      }
+      .text-yellow {
+        color: var(--yellow-custom);
+      }
+      .h-7 {
+        height: 7vh;
+      }
+      .nav-link-custom {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #303644 !important;
+      }
+      .nav-link:hover {
+        font-weight: bold;
+       
+      }
+      
+      .active {
+        font-weight: bold;
+        border-bottom: 1px solid #1d1d1d;
+        color: rgb(34, 33, 33);
+      }
+      nav li{
+        margin: 0 8px;
+      }
+   
+     
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-sm bg-yellow h-7 shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.hamiloes.cool/wp-content/uploads/2023/05/Diseno-sin-titulo-5.png"
+            alt="Bootstrap"
+            width ="60"
+            height="60"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="index.html"> 
+                <i class="fa-solid fa-house me-1"></i>Inicio
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="#">
+                <i class="fa-solid fa-cart-shopping me-1"></i>Ventas
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="#"
+                ><i class="fa-solid fa-cart-flatbed-suitcase me-1"></i>Compras</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom" aria-current="page" href="productos.html"
+                ><i class="fa-solid fa-sitemap me-1"></i>Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom active" aria-current="page" href="clients.html">
+                <i class="fa-solid fa-users me-1"></i>Clientes
+                </a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom " aria-current="page" href="proveedores.html"
+                >
+                <i class="fa-solid fa-truck-moving me-1"></i>Proveedores</a
+              >
+            </li>
+          </ul>
+          <div class="dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="dropdownProfile"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+              src="img/profile.png"
+                alt=""
+                width="45"
+                class="rounded-circle mx-2"
+                height="45"
+              />
+              Jorge Ocampo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+              <a class="dropdown-item" href="perfil.html">
+                <i class="fa-regular fa-user me-3 text-secondary"></i> Perfil
+              </a>
+              <a class="dropdown-item" href="#">
+                <i
+                  class="fa-solid fa-arrow-right-from-bracket me-3 text-secondary"
+                ></i>
+                Cerrar sesion
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container pt-3">
+        <!-- <h3>Proveedores</h3> -->
+
+        <!-- Empresa, contacto, telefono, direccion, correo, estado -->
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <h5 class="card-title">Clientes</h5>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                            data-bs-target="#modalProveedor">
+                            <i class="fa fa-plus"></i>
+                            Nuevo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive ">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Documento</th>
+                                <th>Tipo documento</th>
+                                <th>Teléfono</th>
+                                <th>Correo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>JOSE</td>
+                                <td>Mamani</td>
+                                <td>32165400</td>
+                                <td>CI</td>
+                                <td>+591 77854552</td>
+                                <td>uXk5N@example.com</td>
+                                <td>
+                                    <span class="badge text-bg-success">Activo</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Pablo</td>
+                                <td>Monero</td>
+                                <td>32165400</td>
+                                <td>CI</td>
+                                <td>+591 77854552</td>
+                                <td>uXk5N@example.com</td>
+                                <td>
+                                    <span class="badge text-bg-danger">inactivo</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-warning btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalProveedor" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Datos del cliente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#" class="needs-validation" novalidate>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" id="nombre" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="apellidos" class="form-label">Apellidos</label>
+                                    <input type="text" name="apellidos" id="apellidos" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="documento" class="form-label">Documento</label>
+                                    <input type="text" name="documento" id="documento" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="tipo" class="form-label">Tipo documento</label>
+                                    <select  name="tipo" id="tipo" class="form-select" required>
+                                        <option value="CI">CI</option>
+                                        <option value="NIT">NIT</option>
+                                        <option value="PASS">PASS</option>
+                                        <option value="CEX">CEX</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="text" name="telefono" id="telefono" class="form-control"
+                                        placeholder="+591 XXXXXXXX" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="correo" class="form-label">Correo</label>
+                                    <input type="email" name="correo" id="correo" class="form-control"
+                                        placeholder="example@example.com" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+  </body>
+</html>

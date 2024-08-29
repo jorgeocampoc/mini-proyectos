@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome para los iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      /* Variables de colores personalizados */
+      :root {
+        --bg-dark-2: rgba(41, 41, 43, 0.87);
+        --bg-violet: rgba(230, 31, 213, 0.829);
+      }
+
+      .bg-dark-2 {
+        background-color: var(--bg-dark-2);
+      }
+
+      .bg-violet {
+        background-color: var(--bg-violet);
+      }
+
+      @media (width < 1200px) {
+        .item-1 {
+          order: 2;
+        }
+        .item-2 {
+          order: 1;
+        }
+        .item-3 {
+          order: 3;
+        }
+      }
+
+      .hr-custom {
+        color: black;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+
+      .custom-span-alert {
+        position: absolute;
+        top: 40px;
+        right: 25%;
+        padding: 0;
+        text-align: center;
+        width: 50%;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 1s ease;
+      }
+
+      .custom-span-alert.show {
+        padding: auto;
+        margin: auto;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .tranistionTask {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 1s ease;
+        margin-left: 15px;
+      }
+
+      .tranistionTask.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      #clearSuccess,
+      #tableTrash {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body class="bg-ligth-yellow">
+    <header class="h-10 bg-dark-2 text-white shadow mb-4">
+      <h1 class="text-center py-3">Aplicacion de tareas</h1>
+    </header>
+
+    <section>
+      <div class="container-fluid h-100">
+        <div class="row justify-content-end">
+          <div
+            class="item-1 ol-12 col-md-12 mb-3 col-lg-6 col-xl-4"
+            id="deletesDiv"
+          >
+          <!------------------     tabla conel contenido de tareas eliminadas -------------------->
+            <div class="card text-bg-danger">
+              <div class="card-body" id="cardDeletes">
+                <h3 class="card-title fs-4 text-center">Tareas eliminadas</h3>
+                <hr />
+
+                <p class="card-text text-center" id="deletesTasks">
+                  Sin tareas eliminadas
+                </p>
+              </div>
+              <i
+                onclick="cleanTable('trash')"
+                id="tableTrash"
+                class="py-2 px-1 text-white fa-2x fa-solid fa-trash-can-arrow-up m-auto"
+              >
+              </i>
+            </div>
+          </div>
+          <div
+            class="item-2 col-12 col-md-12 mb-3 col-lg-6 col-xl-4"
+            id="inputDiv"
+          >
+          <!------------------     Card con el input para agregar tareas -------------------->
+            <div class="card bg-primary">
+              <div class="card-body">
+                <div class="input-group mb-3 my-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Escribe tu tarea"
+                    id="inputTask"
+                  />
+                  <button
+                    class="text-white btn bg-dark-2"
+                    type="button"
+                    id="btnAdd"
+                    onclick="createTask()"
+                  >
+                    Añadir
+                  </button>
+                  <span
+                    class="text-danger custom-span-alert alert alert-primary rounded"
+                    role="alert"
+                    id="alertTaskExists"
+                  >
+                    La tarea ya existe
+                  </span>
+                </div>
+                <div
+                  class="card-body bg-white py-2 rounded text-white"
+                  id="task"
+                >
+                  <h3 class="card-title text-center fs-4 text-dark">
+                    Lista de tareas
+                  </h3>                  <hr class="hr-custom" />
+                  <p class="card-text text-center text-black" id="notTasks">
+                    Sin tareas
+                  </p>
+
+                  <!------------------     modal -------------------->
+                  <div
+                    class="modal fade text-black"
+                    id="modalEdit"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="modalEditLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="modalEditLabel">
+                            Actualizar tarea
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body text-danger">
+                          <div class="input-group">
+                            <textarea
+                              class="form-control"
+                              aria-label="With textarea"
+                              id="detailTaskModal"
+                            >
+                            </textarea>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Cancelar
+                          </button>
+                          <button
+                            type="submit"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal"
+                            id="saveData"
+                          >
+                            Guardar cambios
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item-3 col-12 col-md-12 mb-3 col-lg-6 col-xl-4"
+            id="finishDiv"
+          >
+          <!------------------     Tabla con la tareas termiandas -------------------->
+            <div class="card text-bg-success">
+              <div class="card-body" id="tastSuccess">
+                <h3 class="card-title fs-4 text-center">Tareas terminadas</h3>
+                <hr />
+
+                <p class="card-text text-center" id="messageTasksSucess">
+                  Sin tareas terminadas
+                </p>
+              </div>
+              <i
+                onclick="cleanTable('sucess')"
+                id="clearSuccess"
+                class="py-2 px-1 text-white fa-2x fa-solid fa-trash-can-arrow-up m-auto"
+              >
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

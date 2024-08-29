@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    position: relative;
+}
+.section1{
+    content: "";
+    position: absolute;
+    height: 70vh;
+    width: 100vw;
+    background-image: url(https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/03/25/algunas-de-las-mejores-series-de-netflix.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+    border-bottom: 5px solid rgb(43, 41, 41);
+}
+
+.section1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(
+      circle,
+      rgba(92, 89, 89, 0) 0%,
+      rgba(14, 13, 13, 0.7) 20%
+    );
+    z-index: -1;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.logo p{
+    color: red;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 70px;
+  margin-top: 0;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+
+h2{
+    font-size: 70px;
+}
+
+.container-button{
+    font-size: 15px;
+    margin-top: 25px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.267);
+    color: whitesmoke;
+    border: 1px solid rgb(252, 251, 248);
+    margin-right: 20px;
+}
+.des{
+    font-size: 30px;
+    margin: 0;
+}
+
+input {
+    padding: 10px 25px;
+    margin-right: 5px;
+    border-radius: 8px;
+    margin-top: 25px;
+
+    color: whitesmoke;
+    background:rgba(0, 0, 0, 0.137); 
+    border: 2px solid rgba(145, 138, 138, 0.8); 
+}
+
+input::placeholder {
+    color: white;
+    text-align: start;
+    background:transparent
+}

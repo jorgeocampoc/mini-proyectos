@@ -14,3 +14,10 @@
 .custom-width{
     width: 500px;
 }
+
+.custom-alert{
+    font-style: italic;
+    font-size: medium;
+    color: rgb(180, 19, 95);
+}
+

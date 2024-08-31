@@ -5,7 +5,7 @@ Este repositorio contiene una colección de mini proyectos creados con HTML, CSS
 ## Lista de Proyectos
 
 1. [Netflix - Clone home - 1 ](./Netflix%20-%20clone%20home%20-%201/) - Réplica de la pantalla de inicio de Netflix.
-2. [Login JS-HTML-BOOTSTRAP](./Login%20JS-HTML-BOOTSTRAP/) - Aplicación simple de un login/registro de usuarios.
+2. [Login - Blog](./Login%20-%20Blog//) - Aplicación simple de un login/registro de usuarios.
 3. [KFC - Clone home](./KFC%20-%20clone%20home/) - Réplica de la pantalla de inicio de KFC.
 4. [App de clientes](./App%20de%20clientes/) - Una aplicacion de gestion de clientes.
 5. [Juego de adivinanza](./Juego%20de%20adivina%20el%20numero/) - Un juego de adivina el numero.

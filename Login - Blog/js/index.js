@@ -20,7 +20,7 @@
 
 
 const user = {
-    id:0,
+    id:null,
     nameUser:'',
     password:'',
     name:'',
@@ -37,8 +37,7 @@ const d = document;
 
 
 
-const nameLog = d.getElementById('nameLog');
-const passwordLog = d.getElementById('passwordLog');
+
 
 const cardRegister = document.getElementById('cardRegister');
 const cardLogin = document.getElementById('cardLogin');
@@ -62,15 +61,14 @@ function goToRegister(){
 const registerUser = ( event )=>{
     event.preventDefault();
     let users = JSON.parse(localStorage.getItem('users')) || [];
-    console.log(event.target.checkValidity());
     getUser();
     if( event.target.checkValidity() ){
-        if( !isExiste( user, users  ) ){
+        if( !isExists( user, users  ) ){
             let id = parseInt(localStorage.getItem('id')) || 0;
             user.id = id + 1;
             users.push( user )
             localStorage.setItem( 'users', JSON.stringify(users) );
-            localStorage.setItem('id', id + 1);
+            localStorage.setItem('id', user.id);
             generateAlert('success', `El usuario ${user.nameUser} fue registrado`, 'Ir a login')
         }else{
             generateAlert('error', `El usuario ${user.nameUser} no esta disponible`, 'Regresar')
@@ -101,28 +99,30 @@ function generateAlert(tipo, message, action){
 
 
 const loginUser = ( event )=>{
+
     event.preventDefault();
+    const nameLog = d.getElementById('nameLog');
+    const passwordLog = d.getElementById('passwordLog');
     let users = JSON.parse(localStorage.getItem('users')) || [];
     user.nameUser = nameLog.value;
     user.password = passwordLog.value;
     if( nameLog.value.trim() !== '' && passwordLog.value.trim() !== '' ){
-        if( isExiste( user, users ) ){
+        if( isExists( user, users ) ){
             document.getElementById('formLogin').classList.remove('was-validated');
-            localStorage.setItem('user', user.nameUser);
+            let userCurrent = getUserCurrent( users, nameLog.value )
+            localStorage.setItem('user', JSON.stringify( userCurrent ));
             d.getElementById('formLogin').reset();
-            window.location.href = 'home.html'
+             window.location.href = 'home.html';
+            
         }else{
-            generateAlertNoExiste('error', 'El usuario/contraseña son invalidas')
+            generateAlertNotExists('error', 'El usuario/contraseña son invalidas')
             d.getElementById('formLogin').reset();
         }
     }
-
-    
-
 }
 
 
-function generateAlertNoExiste(tipo, message){
+function generateAlertNotExists(tipo, message){
     Swal.fire({
         title: 'Operacion fallida',
         text: `${message}`,
@@ -148,7 +148,7 @@ function getUser(){
 
 
 
-function isExiste( user, users ){
+function isExists( user, users ){
     let res = false;
     if( users !== null ){
         for (let i = 0; i < users.length; i++) {
@@ -162,14 +162,23 @@ function isExiste( user, users ){
 }
 
 
-/**function return true if any fields are empty */
+/**function return true if any field is empty */
 function validateNotEmpty( user ){
     return ( user.name == '' || user.lastName == '' || 
         user.gender == '' || user.phone == '' || user.email == '' ||
         user.city == '' || user.nameUser == '' ||user.password == '' )? true: false;
 }
 
+function getUserCurrent( posts, nameUser ){
+    let res = null;
+    for (let i = 0; i < posts.length; i++) {
+        if( posts[i].nameUser == nameUser ){
+            return posts[i];
+        }
+        
+    }
 
+}
 
 
 

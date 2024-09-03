@@ -93,22 +93,21 @@ const contentTags = document.getElementById('content-tags');
 function showPosts(){
   postsUser.classList.remove('active');
   posts.classList.add('active');
-  contentTags.style.display = 'block';
   let allPosts = JSON.parse( localStorage.getItem('posts') ) || [];
   generateAllPostsDiv(allPosts,'posts','allPosts');
-  contentTags.style.display = 'block';
-  genereTagsBadge( true );
+  genereTagsBadge( true);
+  
 
   
 }
 function filterPostByUser(){
     posts.classList.remove('active');
     postsUser.classList.add('active');
-    genereTagsBadge( false );
     let postUser = JSON.parse( localStorage.getItem('posts') ) || [];
     let user = JSON.parse(localStorage.getItem('user'));
     postUser = postUser.filter( p => p.id == user.id );
-    generateAllPostsDiv(postUser, 'postUser', 'postsCards')
+    generateAllPostsDiv(postUser, 'postUser', 'postsCards');
+    genereTagsBadge( false );
     
 }
 
@@ -147,11 +146,11 @@ function generateAllPostsDiv( allPosts, tipe, idDiv ){
         res+=`
         <div class="card my-1 shadow my-2" id='card-${p.id}'>
         <div class="card-body">
+        <h5 class='text-center pb-3'> ${p.title} </h5>
                 <span class="badge text-bg-${p.tag.color}">${p.tag.name}</span> <br>
                 <small class="">Published by: ${p.user.nameUser}</small>
               </div>
               <div class="card-body">
-                <h5 class='text-center pb-3'> ${p.title} </h5>
                 <p>${p.post}</p>
               </div>
             ${footer}
@@ -166,9 +165,10 @@ let postBtn = document.getElementById('postBtn')
 
 /*/*Geenre TAgs badge*/
 function genereTagsBadge( band ){
-  if(band){
+  
     
-    let res = '';
+    if( band ){
+      let res = '';
   tags.forEach( b =>{
     res+=`
      <span  onclick="filterByTag('${b.name}')" class="badge  tagSpan text-bg-${b.color}">${b.name}</span>
@@ -177,11 +177,15 @@ function genereTagsBadge( band ){
   document.getElementById('tags').innerHTML = res;
   postBtn.style.display = 'inline-block'
 }else{
-  
   document.getElementById('tags').innerHTML = '';
   postBtn.style.display = 'none'
+
+    }
+
   
-  }
+ 
+  
+  
 }
 
 
@@ -195,22 +199,17 @@ function createPost(event) {
     let title = document.getElementById('title').value.trim();
     let tag = parseInt(document.getElementById('tag').value);
     generatePostObject(input, title, tag);
-    if( postObject.post.trim() !== ''){
     let allPosts = JSON.parse( localStorage.getItem('posts') ) || [];
     allPosts.push(postObject);
     localStorage.setItem('posts',JSON.stringify(allPosts))
     generateAllPostsDiv(allPosts, 'posts', 'allPosts');
     closeModal('staticBackdrop');
-    }else{
-      generateAlert('error', 'Llene los campos', 'Error al crear post')
-      document.getElementById('post').value = '';
-      document.getElementById('post').focus();
-    }
-    
-
-  } 
-  document.getElementById('formCreatePost').reset();
-  document.getElementById('formCreatePost').classList.remove('was-validated');
+    document.getElementById('formCreatePost').classList.remove('was-validated');
+    document.getElementById('formCreatePost').reset();
+  } else
+  generateAlert('error', 'Llene los campos', 'Error al crear post')
+  document.getElementById('formCreatePost').classList.add('was-validated');
+  document.getElementById('post').focus();{}
 
 }
 
@@ -256,7 +255,7 @@ function filterUserById(posts,idUser){
 function filterByTag( tag ){
   let posts = JSON.parse( localStorage.getItem('posts') ) || [];
   posts = posts.filter( p => p.tag.name == tag );
-  generateAllPostsDiv(posts, 'posts', 'postsUser')
+  generateAllPostsDiv(posts, 'posts', 'allPosts')
 
 }
 

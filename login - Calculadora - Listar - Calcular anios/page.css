@@ -1,0 +1,24 @@
+*{
+    color: aliceblue;
+}
+body{
+    background: rgb(28,29,29);
+    background: linear-gradient(101deg, rgba(28,29,29,1) 0%, rgba(65,34,67,1) 100%, rgba(214,214,214,1) 100%);
+}
+.bg-custom{
+    background-color: rgb(8, 8, 66);
+}
+div ul p{
+    color: black;
+}
+div a{
+    color: aliceblue;
+}
+
+.bg-custom2{
+    background-color: rgb(126, 6, 76);
+}
+
+.bg-custom3{
+    background-color: rgb(6, 126, 106);
+}

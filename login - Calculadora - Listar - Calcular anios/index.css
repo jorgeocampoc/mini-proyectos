@@ -1,0 +1,58 @@
+* {
+  color: wheat;
+}
+
+body {
+  background: rgb(173, 31, 104);
+  background: linear-gradient(
+    231deg,
+    rgba(173, 31, 104, 1) 0%,
+    rgba(71, 27, 75, 1) 100%,
+    rgba(28, 25, 35, 1) 100%,
+    rgba(60, 164, 51, 1) 100%
+  );
+}
+.bg-custom{
+    background: rgb(28,29,29);
+    background: linear-gradient(101deg, rgba(28,29,29,1) 0%, rgba(65,34,67,1) 100%, rgba(214,214,214,1) 100%);
+}
+
+.page {
+  height: 95vh;
+}
+img {
+  width: 15%;
+}
+
+.custom-container {
+    width: 25%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .custom-container {
+      width: 100%;
+    }
+    img{
+        width: 35%;
+    }
+
+  }
+
+  @media (width > 1023px) {
+    .custom-container {
+      width: 50%;
+    }
+    img{
+        width: 20%;
+    }
+  }
+  #sent{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+  }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="text-center mt-5 col-lg-10 m-auto">
+      <h1 class="text-center "><strong>Bienvenido, Ingrese aqui!</strong></h1>
+      <hr>
+      <img src="assets/295128.png" class="" alt="">
+    </div>
+
+    <div class=" custom-container container ">
+      <form>
+        <div class="form-group mt-3">
+          <label for="formGroupExampleInput " class="mb-2">Usuario</label>
+          <input type="text" class="form-control mb-3" id="formGroupExampleInput" placeholder="" required name="name">
+        </div>
+        <div class="form-group ">
+          <label for="formGroupExampleInput2" class="mb-2">Contraseña</label>
+          <input type="password" class="form-control mb-3" id="formGroupExampleInput2" placeholder="" required
+            name="password">
+        </div>
+        <div>
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" onchange="toggleContrasena()">
+          <label class="form-check-label ms-1" for="flexCheckDisabled" id="checkPass">
+            Ver password
+          </label>
+        </div>
+        <div>
+          <p class="mb-2 mt-2 registerLink">¿No tienens cuenta? <a href="" id="openModalButton"
+              onclick="onModal(event)">Registrate</a></p>
+        </div>
+        <button class="btn btn-primary mt-3" type="button" onclick="send()" id="sent">ingresar
+        </button>
+      </form>
+
+    </div>
+
+
+    <div class="modal " tabindex="-1" id="miModal">
+      <div class="modal-dialog ">
+        <div class="modal-content bg-custom ">
+          <div class="modal-header ">
+            <h5 class="modal-title ">Formulario de registro</h5>
+            <button type="button" class="btn-close  border border-white  " data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group ">
+              <label for="formGroupExampleInput2" class="mb-2">Usuario</label>
+              <input type="text" class="form-control mb-3" id="name" placeholder="" required name="password">
+            </div>
+            <div id="error-message" style="color: red;"></div>
+            <div class="form-group ">
+              <label for="formGroupExampleInput2" class="mb-2">Contraseña</label>
+              <input type="password" class="form-control mb-3" id="password" placeholder="" required name="password">
+            </div>
+            <div id="error-message-password" style="color: red;"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="sendRegister()" id="registerUser">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>

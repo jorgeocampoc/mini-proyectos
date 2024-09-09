@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="lab(29.2345% 39.3825 20.0664)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body id="contenido">
+   <div>
+
+    <h1 >BUSQUEDA DEL TESORO </h1>
+    <div>
+        <button  id="start" >INICIAR</button>
+    </div>
+    <div>
+        <nav>
+            <p id="count" style="display: none;">Click: <span id="contador">0</span></p>
+            <p id="sec" style="display: none;">Time: <span id="segundos"></span></p>
+        </nav>
+    </div>
+    
+    <div class="slideshow-container" >
+        <div class="slide">
+            <img src="assets/findTreasure.jpg" class="imagen" id="1"  >
+        </div>
+        <div class="slide">
+            <img src="assets/img2.webp" class="imagen" id="2" >
+        </div>
+        <div class="slide">
+            <img src="assets/img3.jpg" class="imagen" id="3" >
+        </div>
+    </div>
+    <a id="a" class="prev" onclick="cambiarSlide(-1)">ANT</a>
+    <a id="b" class="next" onclick="cambiarSlide(1)">SIG</a>
+
+   </div>
+  <footer>
+    <p id="p" >SELECCIONA UN MAPA</p>
+
+  </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -15,3 +15,4 @@ Este repositorio contiene una colección de mini proyectos creados con HTML, CSS
 9. [Youtube](./youtube/) - Replica de la pagina de youtube.
 10. [login - Calculadora - Listar - Calcular anios](./login%20-%20Calculadora%20-%20Listar%20-%20Calcular%20anios/) - Aplicacion que contiene un login, listar usuarios, calculadora y calculdora de años.
 11. [Busqueda del teosoro](./Buscando%20el%20tesoro/) - Juego de busqueda del tesoro.
+11. [Busqueda del teosoro](./Black%20%20Jack//) - Juego de mesa Black Jack.

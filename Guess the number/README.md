@@ -14,9 +14,8 @@ Este proyecto está enfocado en crear un juego de adivina el numero entre 1 y 10
 
 ## Características
 
-- Diseño responsivo
 - Manejo de Transiciones
 - Manejo de Animaciones
 - Uso de Modals
-- Validaciones para las entradas
+- Validaciones
 

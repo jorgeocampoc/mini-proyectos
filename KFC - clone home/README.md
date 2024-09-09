@@ -6,9 +6,6 @@ Este proyecto está enfocado en crear un clon de la pagina principal de KFC. Un 
 
 ![Home](./capturas/home.png)
 
-
-
 ## Características
 
-- Diseño responsivo
 - Efectos de hover

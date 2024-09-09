@@ -13,5 +13,5 @@ Este proyecto está enfocado en crear de gestion de tareas. Un diseño en base a
 - Diseño responsivo
 - Efectos de hover
 - Efecto de transiciones
-- Modals
+- Uso de modals
 

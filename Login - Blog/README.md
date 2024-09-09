@@ -19,7 +19,7 @@ Un diseño de login/registro de usuarios con HTML, JS, CSS y Bootstrap. Este pro
 - Diseño responsivo
 - Efectos de hover
 - Transiciones suaves
-- Almacenamiento en localStorage para manejo de datos de usuario
-- Validaciones simples con bootstrap
-- manejo de modals
+- Almacenamiento en localStorage para manejo de datos de usuario y CRUD de comentarios
+- Validaciones con bootstrap
+- Manejo de modals
 - Uso de SweetAlert2 para manejo de alertas
